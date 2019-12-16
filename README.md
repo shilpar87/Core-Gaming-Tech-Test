@@ -1,24 +1,6 @@
 # Core Gaming Game Logic Developer - Tech Test 
 
 ### Implemented Tasks ###
-### Setup and Details
- * Grab repository contents either via zip or git pull.
- * If working with compressed file, unpack file contents to folder of your choice.
- * In command line move to project's root folder.
- * To build all modules execute:
-```
-mvn clean install -DskipTests
-```
- * To run a http web server execute: 
-```
-java -jar Server\target\Server-1.0.1-jar-with-dependencies.jar
-```
- * To run tests, in another command line window move to 'project root'/Client folder and execute: 
-```
-mvn test
-```
- * Watch the output for any test fail/ pass information.
- * All data tables can be found in 'profile.xlsx' file under titled tabs. You do not have to parse the xlsx.
 
 ### Required Tasks 
 
@@ -38,17 +20,13 @@ Steps or changes made to the source code.
 6. The output of the number of occurrences of each element while Random search happens has been redirected to the output.txt.
 7. I have converted profile.xlsx file to profile.xls as my MsOffice was not supporting.
 
-############################# To be implemented #############################
-
 
 #### Desirable Tasks 
 
-* Add a 'spin' request which will return a 3x3 matrix of symbols. Use 'Symbols' and 'Reels' tables. For every reel, draw one random position and populate the whole matrix column with results starting at that drawn position.
-* For each result where middle row of your matrix satisfies one of the rules defined in 'WinRules' return the associated value.
-* Implement a test or tests which would run multiple 'table' requests and check aggregated responses against the 'expected chance' defined in 'WinRules' table. Hint: Again you can use '100k runs error margin' value to compare the results with 99% confidence. 
+1. Add a 'spin' request which will return a 3x3 matrix of symbols. Use 'Symbols' and 'Reels' tables. For every reel, draw one random position and populate the whole matrix column with results starting at that drawn position. - Completed
 
-#### Optional Tasks 
+========= Not sure about below tasks ===== 
 
-* Add 'Return To Player' value in percentage for both 'table' and 'spin'. Assuming each request cost '3.5'. We will not provide you with table to compare your results this time. Hint: To find the requested result compare total cost spent on initiating requests and total value returned in responses. You can use 1% margin error for RTP comparison. 
-* For extra fun, can you change the server - client to work with WebSockets?
+2. For each result where middle row of your matrix satisfies one of the rules defined in 'WinRules' return the associated value.
+3. Implement a test or tests which would run multiple 'table' requests and check aggregated responses against the 'expected chance' defined in 'WinRules' table. Hint: Again you can use '100k runs error margin' value to compare the results with 99% confidence. 
 
